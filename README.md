@@ -11,6 +11,6 @@ This is for Sonos Desktop, although this program is pretty accessible by default
 Files can be found at:
 https://github.com/Novalis7747/sonos
 Latest release direct download:
-https://github.com/Novalis7747/totalcmd-enhanced/raw/master/sonos-1.0.nvda-addon
+https://github.com/Novalis7747/sonos/raw/master/sonos-1.0.nvda-addon
 
 * Important note: contact me for any suggestions and comments under novalis7747@live.com

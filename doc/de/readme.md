@@ -11,6 +11,6 @@
 Alle Dateien können hier gefunden werden:
 https://github.com/Novalis7747/sonos
 Letztes release direkt download:
-https://github.com/Novalis7747/totalcmd-enhanced/raw/master/sonos-1.0.nvda-addon
+https://github.com/Novalis7747/sonos/raw/master/sonos-1.0.nvda-addon
 
 * Wichtige Anmerkung: Für Fragen oder Anregungen, sowie einer speziellen Braille-Ausgabe bitte kontaktiert mich unter Novalis7747@live.com
