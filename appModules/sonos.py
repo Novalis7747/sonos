@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Sonos: a NVDA appModule for Sonos Desktop, Version 1.00
+# Sonos: a NVDA appModule for Sonos Desktop, Version 1.1
 #Copyright (C) 2018 Ralf Kefferpuetz, other contributors
 # Released under GPL 2
 
@@ -12,6 +12,7 @@ import api
 import webbrowser
 import tones
 import scriptHandler
+from NVDAObjects.UIA import ListItem, UIA
 
 """
 NVDA appModule for Sonos Desktop
@@ -20,9 +21,14 @@ Adds 3 hotkeys:
 - double press alt-1 - copies song title to the clipboard
 - control-2 - opens the song title in a virtual invisible window to read it back
 - control-3 - opens Youtube in your default browser with the results for currently playing song (opens in a new tab)
+- makes the Sonos shortCuts window accessible (control-k)
 """
 
 class AppModule(appModuleHandler.AppModule):
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		if obj.role == controlTypes.ROLE_DATAITEM:
+			clsList.insert(0, TBGrid)
 
 	def script_speakInfo(self, gesture):
 		try:
@@ -70,4 +76,16 @@ class AppModule(appModuleHandler.AppModule):
 		"kb:control+2": "speakInfo",
 		"kb:control+3": "openInYoutube"
 	}
+
+class TBGrid(ListItem):
+# tis to make the Sonos shortCuts window accessible. Makes the listview readable as a normal listview (control-k)
+
+	def event_gainFocus(self):
+		fg = api.getFocusObject()
+		if fg.name.startswith('Sonos.Controller.Desktop.Main.KeyboardShortcut'):
+			shortkeys = (" %s %s" % (fg.firstChild.name, fg.firstChild.next.name))
+			fg.name = shortkeys
+			ui.message(shortkeys)
+			return
+		super(TBGrid,self).event_gainFocus()
 
