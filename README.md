@@ -7,10 +7,11 @@ This is for Sonos Desktop, although this program is pretty accessible by default
 - double press control-1 - copies song title to the clipboard 
 - control-2 - opens the song title in a virtual invisible window to read it back 
 - control-3 - opens Youtube in your default browser with the search results for currently playing song (opens in a new tab)
+- fixes also the accessibility of the shortCuts help window. The shortCuts appear now as a normal listview.
 
 Files can be found at:
 https://github.com/Novalis7747/sonos
 Latest release direct download:
-https://github.com/Novalis7747/sonos/raw/master/sonos-1.0.nvda-addon
+https://github.com/Novalis7747/sonos/raw/master/sonos-1.1.nvda-addon
 
 * Important note: contact me for any suggestions and comments under novalis7747@live.com
