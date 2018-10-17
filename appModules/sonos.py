@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Sonos: a NVDA appModule for Sonos Desktop, Version 1.1
+# Sonos: a NVDA appModule for Sonos Desktop, Version 1.2
 #Copyright (C) 2018 Ralf Kefferpuetz, other contributors
 # Released under GPL 2
 
@@ -34,22 +34,24 @@ class AppModule(appModuleHandler.AppModule):
 		try:
 			fg = api.getForegroundObject()
 			# this is the room name
-			s2 = fg.firstChild.next.next.next.next.next.next.next.next.firstChild.next.name
+			s2 = fg.firstChild.next.next.next.next.next.firstChild.next.name
 			# this is the station playing
-			s4 = fg.firstChild.next.next.next.next.next.next.next.next.firstChild.next.next.next.next.next.next.next.name
+			s4 = fg.firstChild.next.next.next.next.next.firstChild.next.next.next.next.next.next.name
 			# this is the song title currently playing
-			s6 = fg.firstChild.next.next.next.next.next.next.next.next.firstChild.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.name
+			s6 = fg.firstChild.next.next.next.next.next.firstChild.next.next.next.next.next.next.next.next.next.next.next.next.next.next.name
 			infoString = (" %s - %s: %s" % (s2, s4, s6))
-			infoString2 = s2+"\n"+s4+"\n"+s6
+			infoString2 = s2+" - "+s4+" - "+s6
+			infoString3 = s4+" - "+s6
 			if scriptHandler.getLastScriptRepeatCount() == 1:
 				#double press
-				api.copyToClip(s6)
+				api.copyToClip(infoString3)
 				tones.beep(1500, 120)
 			else:
 				num=int(gesture.mainKeyName[-1])
 				if num == 2:
 					if not s6: s6 = "no song information found!"
-					ui.browseableMessage(s6, title="Now playing on " + s4, isHtml=False)
+					if not s4: s4 = "no station information found!"
+					ui.browseableMessage(infoString2, title="Now playing on " + s4, isHtml=False)
 				else:
 					ui.message(infoString)
 		except AttributeError:
@@ -60,7 +62,7 @@ class AppModule(appModuleHandler.AppModule):
 	def script_openInYoutube(self, gesture):
 		try:
 			fg = api.getForegroundObject()
-			s6 = fg.firstChild.next.next.next.next.next.next.next.next.firstChild.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.name
+			s6 = fg.firstChild.next.next.next.next.next.firstChild.next.next.next.next.next.next.next.next.next.next.next.next.next.next.name
 			if s6: #do nothing if no song is playing or if song title is not available
 				# following replacement is necessary because youtube search does not accept the & sign
 				s6 = s6.replace("&", " ")
