@@ -10,6 +10,7 @@
 - fixt die Anzeige für die Tastaturkürzel, so das ihr sie wie in einer normalen Liste lesen könnt
 
 Changes:
+V1.3: NVDA 2019.1 kompatibel
 V1.2: added support for desktop version 9.2, for older versions prior to 9.2 use addon version 1.1
 V1.1: made the shortCuts screen speak
 V1.0: initial release
@@ -17,6 +18,6 @@ V1.0: initial release
 Alle Dateien können hier gefunden werden:
 https://github.com/Novalis7747/sonos
 Letztes release direkt download:
-https://github.com/Novalis7747/sonos/raw/master/sonos-1.2.nvda-addon
+https://github.com/Novalis7747/sonos/raw/master/sonos-1.3.nvda-addon
 
 * Wichtige Anmerkung: Für Fragen oder Anregungen, sowie einer speziellen Braille-Ausgabe bitte kontaktiert mich unter Novalis7747@live.com
