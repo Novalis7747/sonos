@@ -10,6 +10,7 @@ This is for Sonos Desktop 9.2 and higher, although this program is pretty access
 - It also makes the shortCuts-keys window accessible and you can read the shortCuts as a normal listview.
 
 Changes:
+V1.4: NVDA 2019.3 compatible
 V1.3: NVDA 2019.1 compatible
 V1.2: added support for desktop version 9.2, for older versions prior to 9.2 use addon version 1.1
 V1.1: made the shortCuts screen speak
@@ -18,6 +19,6 @@ V1.0: initial release
 Files can be found at:
 https://github.com/Novalis7747/sonos
 Latest release direct download:
-https://github.com/Novalis7747/sonos/raw/master/sonos-1.3.nvda-addon
+https://github.com/Novalis7747/sonos/raw/master/sonos-1.4.nvda-addon
 
 * Important note: contact me for any suggestions and comments under novalis7747@live.com

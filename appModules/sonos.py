@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Sonos: a NVDA appModule for Sonos Desktop, Version 1.3
+# Sonos: a NVDA appModule for Sonos Desktop, Version 1.4
 #Copyright (C) 2019 Ralf Kefferpuetz, other contributors
 # Released under GPL 2
 
